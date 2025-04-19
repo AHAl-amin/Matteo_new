@@ -9,7 +9,7 @@ import { BiSupport } from "react-icons/bi";
 const UserDashboardSidebar = () => {
   const location = useLocation();
   // const isDashboardActive = matchPath("/dashboard", location.pathname);
-  const isDashboardActive = ["/dashboard", "/dashboard/buyer_order_create", "/dashboard/createBuyerOrder"].includes(location.pathname);
+  const isDashboardActive = ["/dashboard", "/dashboard/buyer_order_create", "/dashboard/createBuyerOrder", "/dashboard/buyer_candidate_list"].includes(location.pathname);
   const isProjectActive = location.pathname.startsWith('/dashboard/user_notifications');
   
   

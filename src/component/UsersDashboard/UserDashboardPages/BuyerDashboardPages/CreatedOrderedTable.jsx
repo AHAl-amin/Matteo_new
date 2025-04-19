@@ -379,11 +379,11 @@ function CreatedOrderedTable() {
   );
 
   return (
-    <div className="p-6">
+    <div className="px-6 py-10  ">
 
-<h1 className="text-[24.8px] font-bold text-center mb-10 nunito">
-            Order Management
-          </h1>
+      <h1 className="text-[24.8px] font-bold text-center mb-10 nunito">
+        Order Management
+      </h1>
       {/* Tab Buttons */}
       <div className="flex mb-4 justify-center">
         <div className="bg-[#acaeaf23] rounded-full">
@@ -404,10 +404,10 @@ function CreatedOrderedTable() {
 
       {/* Show SellerComponent if seller tab is active */}
       {activeTab === 'seller' ? (
-        <SellerDashboardPages/>
+        <SellerDashboardPages />
       ) : (
         <>
-         
+
 
           {/* Filters and search */}
           <div className="flex justify-between mx-6 my-3">
