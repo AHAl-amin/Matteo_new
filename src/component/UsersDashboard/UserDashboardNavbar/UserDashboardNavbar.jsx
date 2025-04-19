@@ -28,19 +28,20 @@ const UserDashboardNavbar = () => {
 
             {/* User profile and notification on the right */}
             <div className="flex items-center space-x-4">
-                <NavLink>
-                <div className="relative cursor-pointer">
-                    <button className="p-2 rounded-full hover:bg-gray-100 transition-transform duration-200 ">
+                <NavLink to='/dashboard/user_notifications' >
+                <div className="relative ">
+                    <button className="p-2 rounded-full hover:bg-gray-100 transition-transform duration-200 cursor-pointer ">
                         <Bell className="h-7 w-7 text-gray-600" /> {/* Increased base size */}
                     </button>
                     <div className="absolute text-[10px] p-[5px] top-[6px] right-[10px] bg-red-400 rounded-full"></div>
                 </div>
                 </NavLink>
                 <div className="flex items-center space-x-2">
-                    <div className="h-10 w-10">
+                    <div className="">
                         <img
-                            src="https://res.cloudinary.com/dfsu0cuvb/image/upload/v1738148405/fotor-2025010923230_1_u9l6vi.png"
+                            src="https://i.ibb.co.com/x2wkVkr/Whats-App-Image-2024-07-04-at-10-43-40-AM.jpg"
                             alt="User profile"
+                            className="h-10 w-10 rounded-full"
                         />
                     </div>
                     <span className="text-[17px] font-medium">Cameron</span>

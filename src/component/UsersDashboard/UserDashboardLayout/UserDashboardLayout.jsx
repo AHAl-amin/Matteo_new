@@ -7,13 +7,14 @@ const UserDashboardLayout = () => {
     <div className="flex h-screen">
       {/* Sidebar */}
       <div className="bg-white h-full fixed transition-all duration-300 ease-in-out z-40 w-[350px]">
-        <div className="h-full flex flex-col justify-between">
+        <div className="h-full flex flex-col justify-between shadow-2xl">
           {/* Sidebar Content */}
           <UserDashboardSidebar />
         </div>
       </div>
 
       {/* Main Content Area */}
+
       <div className="flex flex-col ml-[350px] w-[calc(100%-350px)]">
         {/* Navbar - Full width and above sidebar */}
         <div
@@ -27,7 +28,7 @@ const UserDashboardLayout = () => {
         </div>
 
         {/* Outlet (Main Content) */}
-        <div className="h-full bg-gray-200 mt-16 overflow-auto">
+        <div className="h-full mt-16 overflow-auto">
           <Outlet />
         </div>
       </div>

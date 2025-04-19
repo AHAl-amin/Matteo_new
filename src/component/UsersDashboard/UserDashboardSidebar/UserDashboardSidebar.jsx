@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { matchPath, NavLink, useLocation } from "react-router-dom";
 import { Users } from "lucide-react";
 import { TbBrandWechat } from "react-icons/tb";
 import { MdOutlineDashboard } from "react-icons/md";
@@ -8,6 +8,8 @@ import { BiSupport } from "react-icons/bi";
 
 const UserDashboardSidebar = () => {
   const location = useLocation();
+  // const isDashboardActive = matchPath("/dashboard", location.pathname);
+  const isDashboardActive = ["/dashboard", "/dashboard/buyer_order_create", "/dashboard/createBuyerOrder"].includes(location.pathname);
   const isProjectActive = location.pathname.startsWith('/dashboard/user_notifications');
   
   
@@ -21,12 +23,17 @@ const UserDashboardSidebar = () => {
       <div className="flex flex-col gap-2 pt-10 mx-10">
         <NavLink
           to="/dashboard"
-          end
-          className={({ isActive }) =>
-            `flex items-center gap-3 px-6 py-3 transition-colors duration-200 ${
-              isActive ? 'bg-[#0D95DD] text-white rounded-md' : 'hover:bg-[#0daddd] hover:text-white rounded-md'
-            }`
-          }
+          
+          // className={({ isActive }) =>
+          //   `flex items-center gap-3 px-6 py-3 transition-colors duration-200 ${
+          //     isActive ? 'bg-[#0D95DD] text-white rounded-md' : 'hover:bg-[#0daddd] hover:text-white rounded-md'
+          //   }`
+          // }
+
+          className={`flex items-center gap-3 px-6 py-3 transition-colors duration-200 ${
+            isDashboardActive ? 'bg-[#0D95DD] text-white rounded-md' : 'hover:bg-[#0daddd] hover:text-white rounded-md'
+          }`}
+          
         >
           <MdOutlineDashboard className="h-6 w-6" />
           <h1 className="text-lg font-medium">Dashboard</h1>

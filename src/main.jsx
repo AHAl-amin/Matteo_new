@@ -19,7 +19,7 @@ import AdminDashboardNotification from './component/AdminDashboard/AdminDashboar
 import OrderManagement from './component/UsersDashboard/UserDashboardPages/OrderManagement.jsx';
 import UserSupport from './component/UsersDashboard/UserDashboardPages/UserSupport/UserSupport.jsx';
 
-import BuyerDashboardPages from './component/UsersDashboard/UserDashboardPages/BuyerDashboardPages/BuyerDashboardPages.jsx';
+// import BuyerDashboardPages from './component/UsersDashboard/UserDashboardPages/BuyerDashboardPages/BuyerDashboardPages.jsx';
 import CreateOrder from './component/UsersDashboard/UserDashboardPages/BuyerDashboardPages/CreateOrder.jsx';
 import CreatedOrderedTable from './component/UsersDashboard/UserDashboardPages/BuyerDashboardPages/CreatedOrderedTable.jsx';
 import BuyerCandidateList from './component/UsersDashboard/UserDashboardPages/BuyerDashboardPages/BuyerCandidateList.jsx';
@@ -34,6 +34,7 @@ import ConfirmEmail from './component/Shared/ConfirmEmail/ConfirmEmail.jsx';
 import Verification from './component/Shared/Verification/Verification.jsx';
 import ConfirmPassword from './component/Shared/ConfirmPassword/ConfirmPassword.jsx';
 import PasswordChangeSuccesfully from './component/Shared/PasswordChangeSuccesfully/PasswordChangeSuccesfully.jsx';
+import Chat from './component/UsersDashboard/UserDashboardPages/Chat/Chat.jsx';
 
 
 const router = createBrowserRouter([
@@ -61,14 +62,15 @@ const router = createBrowserRouter([
         path:"userSupport",
         element:<UserSupport></UserSupport>
       },
-      {
-        path:"sellerDashboardPages",
-        element:<BuyerDashboardPages></BuyerDashboardPages>
-      },
+      // {
+      //   path:"sellerDashboardPages",
+      //   element:<BuyerDashboardPages></BuyerDashboardPages>
+      // },
       {
         path:"createBuyerOrder",
         element:<CreateOrder></CreateOrder>
       },
+      
      
       {
         path:"buyer_order_create",
@@ -93,6 +95,10 @@ const router = createBrowserRouter([
       {
         path:"user_notifications",
         element:<UserNotifications/>
+      },
+      {
+        path:'chat',
+        element:<Chat/>
       }
      
     ]
